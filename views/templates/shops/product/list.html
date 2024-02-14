@@ -78,7 +78,7 @@
     <h3> Category 1 - 1 </h3>
     <div class="pd_row">
         {% for pd in pdlist %}
-        <a href="/shops/product_detail">
+        <a href="/shops/product/view/{{ pd.prodnum }}">
             <div class="product">
                 <img src="{{ pd.tumbimg }}">
                 <div class="pd_fl">
@@ -91,20 +91,6 @@
         {% endfor %}
     </div>
 </div>
-
-<ul class="">
-    <li class="page-item">
-        <a href="" class="page-link">이전</a>
-    </li>
-
-    <li class="page-item">
-        <a href="" class="page-link">{{ idx }}</a>
-    </li>
-
-    <li class="page-item">
-        <a href="" class="page-link">다음</a>
-    </li>
-</ul>
 {% endblock %}
 
 

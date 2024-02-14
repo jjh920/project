@@ -23,13 +23,10 @@ class ProductService():
                 .offset(0).limit(20)
             result = sess.execute(stmt)
         return result
-    #
-    # @staticmethod
-    # def select_list():
-    #     with Session() as sess:
-    #         stmt = select(Product.prodnum, Product.name, Product.exp, Product.detail, Product.price, Product.tumbimg,
-    #                       Product.catnum) \
-    #             .order_by(Product.prodnum.desc()) \
-    #             .offset(0).limit(20)
-    #         result = sess.execute(stmt)
-    #     return result
+
+    @staticmethod
+    def selectone_prod(prodnum):
+        with Session() as sess:
+            stmt = select(Product).filter_by(prodnum=prodnum)
+            result = sess.execute(stmt).first()
+        return result
