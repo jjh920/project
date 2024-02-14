@@ -79,15 +79,15 @@
     .btn:hover {
         display: block;
         padding: 20px 10px;
-        background: transparent;
+        background: #4a4a4a;
         border: 1px solid #4a4a4a;
         font-size: 13px;
-        color: #4a4a4a
+        color: #fff
     }
 
     .box {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 </style>
 
@@ -106,9 +106,11 @@
             {% endif %}
             <div class="">{{ pd.price }} 원</div>
             <div class="box">
-                <button type="button" class="btn" name="checkout" onclick="alert('공사중입니다.')">
-                    구매
-                </button>
+                <a href="/shops/order" style="display:grid">
+                    <button type="button" class="btn" name="checkout">
+                        구매
+                    </button>
+                </a>
                 <button type="button" class="btn" name="checkout" onclick="alert('공사중입니다.')">
                     장바구니 넣기
                 </button>
